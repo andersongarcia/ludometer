@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ludometer</string>
+    <string name="lblPlayerOne">Jogador 1</string>
+    <string name="lblPlayerTwo">Jogador 2</string>
+    <string name="lblStart">Iniciar</string>
+    <string name="lblPause">Parar</string>
+    <string name="lblReset">Zerar</string>
+    <string name="open_dice">Dados</string>
+    <string name="open_timer">Cronômetro</string>
+    <string name="open_chessclock">Relógio de Xadrez</string>
+    <string name="time_over">Tempo esgotado!</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
