@@ -4,18 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".DiceActivity">
     <item
-        android:id="@+id/open_dice"
-        android:title="@string/open_dice"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/open_timer"
-        android:title="@string/open_timer"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/open_chessclock"
-        android:title="@string/open_chessclock"
-        android:orderInCategory="100"
-        app:showAsAction="always" />
+        android:id="@+id/menu_principal"
+        android:icon="@drawable/ic_menu_list"
+        android:title="@string/menu_principal"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/open_dice"
+                android:title="@string/open_dice"
+                android:orderInCategory="100"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/open_timer"
+                android:title="@string/open_timer"
+                android:orderInCategory="100"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/open_chessclock"
+                android:title="@string/open_chessclock"
+                android:orderInCategory="100"
+                app:showAsAction="always" />
+        </menu>
+    </item>
 </menu>

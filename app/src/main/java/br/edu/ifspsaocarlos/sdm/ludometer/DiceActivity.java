@@ -2,6 +2,8 @@ package br.edu.ifspsaocarlos.sdm.ludometer;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,7 +12,7 @@ import java.util.Random;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.model.SimpleDice;
 
-public class DiceActivity extends Activity {
+public class DiceActivity extends AppCompatActivity {
 
     private SimpleDice dice; // dado simples (6 lados)
     private ImageView ivDice; // Visualização do dado.
