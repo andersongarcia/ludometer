@@ -8,7 +8,7 @@ import android.widget.Chronometer;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.model.Stopwatch;
 
-public class ChessClockActivity extends Activity {
+public class ChessClockActivity extends BaseActivity {
 
     private Stopwatch chronP1;
     private Stopwatch chronP2;
@@ -22,19 +22,18 @@ public class ChessClockActivity extends Activity {
         chronP1 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP1));
         chronP2 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP2));
         turn = true; // começa com P1
-        chronP1.start();
     }
 
     public void onClickChron(View view) {
         if (turn) {
             // desativa cronometro do P1 e ativa de P2.
-            chronP2.resume();
-            chronP1.stop();
+            chronP1.resume();
+            chronP2.stop();
             turn = false;
         } else {
             // ativa cronometro do P1 e desativa de P2.
-            chronP1.resume();
-            chronP2.stop();
+            chronP1.stop();
+            chronP2.resume();
             turn = true;
         }
     }

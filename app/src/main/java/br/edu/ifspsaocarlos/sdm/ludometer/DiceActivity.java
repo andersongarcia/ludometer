@@ -12,7 +12,7 @@ import java.util.Random;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.model.SimpleDice;
 
-public class DiceActivity extends AppCompatActivity {
+public class DiceActivity extends BaseActivity {
 
     private SimpleDice dice; // dado simples (6 lados)
     private ImageView ivDice; // Visualização do dado.
@@ -24,10 +24,6 @@ public class DiceActivity extends AppCompatActivity {
 
         ivDice = (ImageView) findViewById(R.id.imgDice);
         dice = new SimpleDice();
-    }
-    public boolean onCreateOptionsMenu(Menu menu) {
-            getMenuInflater().inflate(R.menu.menu_principal, menu);
-        return true;
     }
 
     public void onClickSort (View view) {
