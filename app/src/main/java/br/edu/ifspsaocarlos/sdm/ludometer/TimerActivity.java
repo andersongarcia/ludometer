@@ -4,48 +4,29 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
+
+import br.edu.ifspsaocarlos.sdm.ludometer.model.Countdown;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.ITimer;
 
 public class TimerActivity extends AppCompatActivity {
 
-    private CountDownTimer timer;
+    private ITimer timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
-        timer = new LudoTimer(60000, 1000);
+        timer = new Countdown(30000,(TextView)findViewById(R.id.countdown_timer));
     }
 
     public void onClickStartTimer (View view) {
-
+        timer.start();
     }
 
-    public void onClickResetTimer (View view) {
-
-    }
-}
-
-class LudoTimer extends CountDownTimer {
-
-    /**
-     * @param millisInFuture    The number of millis in the future from the call
-     *                          to {@link #start()} until the countdown is done and {@link #onFinish()}
-     *                          is called.
-     * @param countDownInterval The interval along the way to receive
-     *                          {@link #onTick(long)} callbacks.
-     */
-    public LudoTimer(long millisInFuture, long countDownInterval) {
-        super(millisInFuture, countDownInterval);
-    }
-
-    @Override
-    public void onTick(long millisUntilFinished) {
-
-    }
-
-    @Override
-    public void onFinish() {
-
+    public void onClickStopTimer (View view) {
+        timer.start();
     }
 }
+

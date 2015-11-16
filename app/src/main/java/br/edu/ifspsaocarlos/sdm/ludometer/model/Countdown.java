@@ -23,7 +23,7 @@ public class Countdown implements ITimer {
 
     @Override
     public void start() {
-        this.timer = new CountDownTimer(startAt, 0) {
+        this.timer = new CountDownTimer(startAt, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 String v = String.format("%02d", millisUntilFinished/60000);
@@ -33,7 +33,7 @@ public class Countdown implements ITimer {
 
             @Override
             public void onFinish() {
-                textView.setText(R.string.time_over);
+                textView.setText(R.string.times_up);
             }
         };
         this.timer.start();

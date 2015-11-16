@@ -8,7 +8,7 @@
     <string name="open_dice">Dados</string>
     <string name="open_timer">Cronômetro</string>
     <string name="open_chessclock">Relógio de Xadrez</string>
-    <string name="time_over">Tempo esgotado!</string>
+    <string name="times_up">Tempo esgotado!</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="menu_principal">Menu Principal</string>
     <string name="open_diceset">Conjunto de Dados</string>

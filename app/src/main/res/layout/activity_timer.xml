@@ -17,14 +17,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/lblStart"/>
+            android:text="@string/lblStart"
+            android:onClick="onClickStartTimer"/>
 
         <Button
             android:id="@+id/btnPause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/lblPause"/>
+            android:text="@string/lblPause"
+            android:onClick="onClickStopTimer"/>
 
         <Button
             android:id="@+id/btnReset"
@@ -35,11 +37,12 @@
 
     </LinearLayout>
 
-    <Chronometer
-        android:id="@+id/timer"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:textSize="60sp"
-        android:gravity="center" />
+    <TextView
+        android:id="@+id/countdown_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="00:00"
+        android:textSize="120sp"/>
 
 </LinearLayout>
