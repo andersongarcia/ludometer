@@ -22,11 +22,13 @@ public class TimerActivity extends AppCompatActivity {
     }
 
     public void onClickStartTimer (View view) {
+
         timer.start();
+
     }
 
     public void onClickStopTimer (View view) {
-        timer.start();
+        timer.stop();
     }
 }
 

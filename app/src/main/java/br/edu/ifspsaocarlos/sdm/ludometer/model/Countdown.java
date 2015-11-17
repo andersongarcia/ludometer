@@ -4,6 +4,7 @@ import android.os.CountDownTimer;
 import android.widget.TextView;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.util.TimeFormat;
 
 /*
  * Chronômetro de contagem regressiva
@@ -26,9 +27,8 @@ public class Countdown implements ITimer {
         this.timer = new CountDownTimer(startAt, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                String v = String.format("%02d", millisUntilFinished/60000);
-                int va = (int)( (millisUntilFinished%60000)/1000);
-                textView.setText(String.format("%02d",va));
+                int[] time = TimeFormat.milliToTime(millisUntilFinished);
+                textView.setText(String.format("%02d:%02d",time[1],time[2]));
             }
 
             @Override

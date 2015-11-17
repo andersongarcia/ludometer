@@ -100,10 +100,10 @@ public class TimeFormat {
      */
     public static int[] milliToTime (Long milliseconds) {
         int[] time = new int[4];
-        time[0] = milliseconds.intValue() % 1000;
-        time[1] = milliToSeconds(milliseconds) % 60;
-        time[2] = milliToMinutes(milliseconds) % 60;
-        time[3] = milliToMinutes(milliseconds) / 60;
+        time[3] = milliseconds.intValue() % 1000;
+        time[2] = milliToSeconds(milliseconds) % 60;
+        time[1] = milliToMinutes(milliseconds) % 60;
+        time[0] = milliToMinutes(milliseconds) / 60;
         return time;
     }
 }
