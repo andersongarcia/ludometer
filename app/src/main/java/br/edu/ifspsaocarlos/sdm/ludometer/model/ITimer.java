@@ -4,10 +4,14 @@ package br.edu.ifspsaocarlos.sdm.ludometer.model;
  * Interface para temporizador genérico
  */
 public interface ITimer {
-    /** zera cronômetro e inicia a contagem */
+    /** inicia uma nova contagem */
     void start();
-    /** interrompe a contagem */
+    /** termina a contagem */
     void stop();
+    /** interrompe a contagem */
+    void pause();
     /** reinicia a contagem */
     void resume();
+    /** retorna tempo restante */
+    long getLastTime();
 }

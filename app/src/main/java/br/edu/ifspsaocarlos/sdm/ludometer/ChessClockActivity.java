@@ -26,14 +26,14 @@ public class ChessClockActivity extends BaseActivity {
 
     public void onClickChron(View view) {
         if (turn) {
-            // desativa cronometro do P1 e ativa de P2.
+            // ativa cronometro do P1 e desativa de P2.
             chronP1.resume();
             chronP2.stop();
             turn = false;
         } else {
-            // ativa cronometro do P1 e desativa de P2.
-            chronP1.stop();
+            // desativa cronometro do P1 e ativa de P2.
             chronP2.resume();
+            chronP1.stop();
             turn = true;
         }
     }

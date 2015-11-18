@@ -34,6 +34,11 @@ public class Stopwatch implements ITimer {
     }
 
     @Override
+    public void pause() {
+        stop();
+    }
+
+    @Override
     public void resume() {
         /** Se cronômetro já estiver iniciado, continua contagem */
         if(isStarted){
@@ -43,6 +48,11 @@ public class Stopwatch implements ITimer {
         /** Caso contrário, inicia contagem */
         else
             this.start();
+    }
+
+    @Override
+    public long getLastTime() {
+        return this.time;
     }
 
 }

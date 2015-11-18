@@ -10,6 +10,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:padding="20sp"
         android:weightSum="3">
 
         <Button
@@ -26,14 +27,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/lblPause"
-            android:onClick="onClickStopTimer"/>
+            android:onClick="onClickPauseTimer"/>
 
-        <!--Button
+        <Button
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/lblReset"/ -->
+            android:text="@string/lblReset"
+            android:onClick="onClickResetTimer"/>
 
     </LinearLayout>
 
@@ -43,13 +45,33 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="00:00"
-        android:textSize="120sp"/>
+        android:textSize="120sp"
+        android:textColor="@android:color/black" />
 
-    <NumberPicker
+    <!--
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/timer_view"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_gravity="center">
+
+        <br.edu.ifspsaocarlos.sdm.ludometer.component.CountdownNumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer_mins"
+            android:layout_gravity="center_horizontal"
+            min="10" max="59"
+            />
+
+        <br.edu.ifspsaocarlos.sdm.ludometer.component.CountdownNumberPicker
+            android:layout_alignRight="@id/timer_mins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer_secs"
+            android:layout_gravity="center_horizontal"
+            min="10" max="59"
+            />
+
+    </LinearLayout>
+    -->
 
 </LinearLayout>
