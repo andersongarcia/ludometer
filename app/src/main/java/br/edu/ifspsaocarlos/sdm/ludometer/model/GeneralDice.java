@@ -8,7 +8,6 @@ public class GeneralDice extends Raffle {
      */
     public GeneralDice(int sides) {
         super(sides);
-
-        this.result = 6; // default initial value
+        this.result = this.roll(); // default initial value
     }
 }

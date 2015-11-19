@@ -18,12 +18,16 @@ public class DiceActivity extends BaseActivity {
 
         ivDice = (ImageView) findViewById(R.id.img_dice);
         dice = new SimpleDice();
+        show(dice.roll());
     }
 
     public void onClickSort (View view) {
         // Ao clicar na tela sorteia um novo número do dado.
         int numberDrawn = dice.roll();
+        show(numberDrawn);
+    }
 
+    private void show(int numberDrawn) {
         // De acordo com o número sorteado muda a imagem do dado.
         switch (numberDrawn) {
             case 0: // Lado 1;

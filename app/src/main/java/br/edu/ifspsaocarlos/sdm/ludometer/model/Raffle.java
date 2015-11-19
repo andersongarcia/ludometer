@@ -15,7 +15,6 @@ public abstract class Raffle implements ISortable {
      * @param length número de variáveis para sorteio */
     public Raffle(int length){
         this.length = length;
-
     }
 
     public int getResult() {
@@ -24,7 +23,7 @@ public abstract class Raffle implements ISortable {
 
     @Override
     public int roll() {
-        this.result = new Random(SystemClock.currentThreadTimeMillis()).nextInt(this.length);
+        this.result = new Random().nextInt(this.length);
         return this.result;
     }
 }
