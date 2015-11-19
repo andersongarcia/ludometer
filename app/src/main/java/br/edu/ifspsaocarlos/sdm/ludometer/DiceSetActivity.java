@@ -40,6 +40,6 @@ public class DiceSetActivity extends BaseActivity {
         ListAdapter adaptador = new DiceSetAdapter(this, diceSet.getSet());
         listView.setAdapter(adaptador);
 
-        totalDices.setText(numberDrawn);
+        //totalDices.setText(numberDrawn);
     }
 }

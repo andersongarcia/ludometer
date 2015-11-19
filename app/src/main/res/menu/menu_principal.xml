@@ -4,6 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".DiceActivity">
     <item
+        android:id="@+id/menu_config"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="ifRoom"
+        android:title="@string/menu_settings" />
+    <item
         android:id="@+id/menu_principal"
         android:icon="@drawable/ic_menu_list"
         android:title="@string/menu_principal"

@@ -13,4 +13,5 @@
     <string name="menu_principal">Menu Principal</string>
     <string name="open_diceset">Conjunto de Dados</string>
     <string name="total">Total:</string>
+    <string name="menu_settings">Settings</string>
 </resources>
