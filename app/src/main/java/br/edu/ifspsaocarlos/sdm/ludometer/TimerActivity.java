@@ -85,5 +85,13 @@ public class TimerActivity extends AppCompatActivity {
         counterView.setText(showDigitalClock(startTime));
         timer = new Countdown(startTime,counterView);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        // Grava ultimo tempo do cronometro utilizado.
+        LudometerPreferences.setTimerPreference(this, startTime);
+    }
 }
 
