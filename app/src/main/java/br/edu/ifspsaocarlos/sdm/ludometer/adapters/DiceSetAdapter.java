@@ -15,7 +15,9 @@ import br.edu.ifspsaocarlos.sdm.ludometer.model.GeneralDice;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.Raffle;
 
 public class DiceSetAdapter extends ArrayAdapter<Raffle> {
+
     private LayoutInflater inflator;
+
     public DiceSetAdapter(Activity activity, List<Raffle> list) {
         super(activity, R.layout.dice_cell, list);
         inflator = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

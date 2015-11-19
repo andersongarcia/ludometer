@@ -34,7 +34,7 @@ public class DiceSet extends Raffle {
     public int roll() {
         this.result = 0;
         for (Raffle dice : this.set) {
-            this.result += dice.roll();
+            this.result += (dice.roll() + 1);
         }
 
         return this.result;

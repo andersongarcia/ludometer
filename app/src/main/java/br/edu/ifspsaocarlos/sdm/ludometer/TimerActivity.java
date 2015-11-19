@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.model.Countdown;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.ITimer;
+import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.TimeFormat;
 
 public class TimerActivity extends AppCompatActivity {
@@ -21,7 +22,9 @@ public class TimerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
-        startTime = 30000;
+        // Busca tempo inicial do arquivo de preferencias.
+        startTime = LudometerPreferences.getTimerPreference(this);
+
         counterView = (TextView)findViewById(R.id.countdown_timer);
         counterView.setText(showDigitalClock(startTime));
         timer = new Countdown(startTime,counterView);
@@ -38,6 +41,8 @@ public class TimerActivity extends AppCompatActivity {
         findViewById(R.id.btnPause).setEnabled(true);
         findViewById(R.id.btnReset).setEnabled(true);
         findViewById(R.id.btnStart).setEnabled(false);
+        findViewById(R.id.plus_time).setEnabled(false);
+        findViewById(R.id.minus_time).setEnabled(false);
     }
 
     public void onClickPauseTimer (View view) {
@@ -50,10 +55,12 @@ public class TimerActivity extends AppCompatActivity {
     public void onClickResetTimer (View view) {
         timer.stop();
         counterView.setText(showDigitalClock(startTime));
-        timer = new Countdown(startTime,(TextView)findViewById(R.id.countdown_timer));
+        timer = new Countdown(startTime,counterView);
         findViewById(R.id.btnPause).setEnabled(false);
         findViewById(R.id.btnReset).setEnabled(false);
         findViewById(R.id.btnStart).setEnabled(true);
+        findViewById(R.id.plus_time).setEnabled(true);
+        findViewById(R.id.minus_time).setEnabled(true);
         ((TextView) findViewById(R.id.countdown_timer)).setTextColor(Color.BLACK);
     }
 
@@ -64,6 +71,19 @@ public class TimerActivity extends AppCompatActivity {
         digitalClock = String.format("%02d:%02d",clock[1],clock[2]);
 
         return digitalClock;
+    }
+
+    public void onClickChangeTime (View view) {
+        int button = view.getId();
+
+        if (button == findViewById(R.id.plus_time).getId()) {
+            startTime += (startTime<3595000) ? 5000 : 0;
+        } else if (button == findViewById(R.id.minus_time).getId()) {
+            startTime -= (startTime>5000) ? 5000 : 0;
+        }
+
+        counterView.setText(showDigitalClock(startTime));
+        timer = new Countdown(startTime,counterView);
     }
 }
 

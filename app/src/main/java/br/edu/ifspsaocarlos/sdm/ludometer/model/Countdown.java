@@ -39,6 +39,7 @@ public class Countdown implements ITimer {
 
             @Override
             public void onFinish() {
+                textView.setText("00:00");
                 stop();
             }
         };

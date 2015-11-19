@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/lblStart"
-            android:onClick="onClickStartTimer"/>
+            android:onClick="onClickStartTimer" />
 
         <Button
             android:id="@+id/btnPause"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/lblPause"
-            android:onClick="onClickPauseTimer"/>
+            android:onClick="onClickPauseTimer" />
 
         <Button
             android:id="@+id/btnReset"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/lblReset"
-            android:onClick="onClickResetTimer"/>
+            android:onClick="onClickResetTimer" />
 
     </LinearLayout>
 
@@ -46,8 +46,33 @@
         android:layout_gravity="center_horizontal"
         android:text="00:00"
         android:textSize="120sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:layout_marginTop="25sp" />
 
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp">
+
+        <Button
+            android:id="@+id/plus_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:onClick="onClickChangeTime" />
+        <Button
+            android:id="@+id/minus_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:onClick="onClickChangeTime" />
+
+    </RelativeLayout>
     <!--
     <LinearLayout
         android:layout_width="wrap_content"
