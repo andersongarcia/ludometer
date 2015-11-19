@@ -1,6 +1,7 @@
 package br.edu.ifspsaocarlos.sdm.ludometer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.SystemClock;
 import android.os.Bundle;
 import android.view.View;
@@ -36,5 +37,10 @@ public class ChessClockActivity extends BaseActivity {
             chronP1.stop();
             turn = true;
         }
+    }
+
+    @Override
+    protected Intent getConfig() {
+        return null;
     }
 }

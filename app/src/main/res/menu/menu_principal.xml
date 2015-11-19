@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".DiceActivity">
     <item
         android:id="@+id/menu_config"
-        android:icon="@drawable/ic_settings"
+        android:icon="@drawable/gear_config_wht"
         app:showAsAction="ifRoom"
         android:title="@string/menu_settings" />
     <item

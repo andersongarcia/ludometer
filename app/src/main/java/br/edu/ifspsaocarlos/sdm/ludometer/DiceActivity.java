@@ -1,5 +1,6 @@
 package br.edu.ifspsaocarlos.sdm.ludometer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -49,5 +50,10 @@ public class DiceActivity extends BaseActivity {
                 ivDice.setImageResource(R.drawable.dado_6);
                 break;
         }
+    }
+
+    @Override
+    protected Intent getConfig() {
+        return null;
     }
 }

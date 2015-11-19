@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,7 +31,11 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.open_timer:
                 startActivity(new Intent(this, TimerActivity.class));
                 break;
+            case R.id.menu_config:
+                startActivity(this.getConfig());
         }
         return false;
     }
+
+    protected abstract Intent getConfig();
 }
