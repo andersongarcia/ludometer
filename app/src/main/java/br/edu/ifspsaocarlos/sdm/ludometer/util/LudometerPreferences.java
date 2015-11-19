@@ -13,6 +13,7 @@ public class LudometerPreferences {
 
     private final static String PREF_NAME = "LudometerPreferences";
     private final static String TIMER_START_TIME = "TimerStartTime";
+    private final static String NUMBER_OF_DICES = "NumberOfDices";
 
     static SharedPreferences getSp (Activity activity) {
         return activity.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
@@ -25,6 +26,16 @@ public class LudometerPreferences {
     public static void setTimerPreference (Activity activity, long startTime) {
         SharedPreferences.Editor ed = getSp(activity).edit();
         ed.putLong(TIMER_START_TIME, startTime);
+        ed.commit();
+    }
+
+    public static int getNumberOfDices(Activity activity){
+        return getSp(activity).getInt(NUMBER_OF_DICES, 6);
+    }
+
+    public static void setNumberOfDices (Activity activity, int numberOfDices) {
+        SharedPreferences.Editor ed = getSp(activity).edit();
+        ed.putInt(NUMBER_OF_DICES, numberOfDices);
         ed.commit();
     }
 }
