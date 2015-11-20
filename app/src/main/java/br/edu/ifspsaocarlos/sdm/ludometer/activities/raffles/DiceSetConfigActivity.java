@@ -9,7 +9,11 @@ import br.edu.ifspsaocarlos.sdm.ludometer.R;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.ConfigActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 
+/**
+ * Tela de configuração dos parâmetros do conjunto de dados.
+ */
 public class DiceSetConfigActivity extends ConfigActivity {
+
     private Spinner spinner;
     private NumberPicker picker;
 
@@ -25,7 +29,7 @@ public class DiceSetConfigActivity extends ConfigActivity {
     }
 
     @Override
-    public void saveconfig() {
+    public void saveConfig() {
         Integer numOfDices = picker.getValue();
 
         // salva configurações nas shared preferences

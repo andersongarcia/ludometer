@@ -7,31 +7,31 @@
         android:id="@+id/menu_config"
         android:icon="@drawable/gear_config_wht"
         app:showAsAction="ifRoom"
-        android:title="@string/menu_settings" />
+        android:title="@string/mnu_settings" />
     <item
         android:id="@+id/menu_principal"
         android:icon="@drawable/ic_menu_list"
-        android:title="@string/menu_principal"
+        android:title="@string/mnu_main_menu"
         app:showAsAction="ifRoom">
         <menu>
             <item
                 android:id="@+id/open_dice"
-                android:title="@string/open_dice"
+                android:title="@string/mnu_open_dice"
                 android:orderInCategory="100"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/open_diceset"
-                android:title="@string/open_diceset"
+                android:title="@string/mnu_open_diceset"
                 android:orderInCategory="100"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/open_timer"
-                android:title="@string/open_timer"
+                android:title="@string/mnu_open_timer"
                 android:orderInCategory="100"
                 app:showAsAction="always" />
             <item
                 android:id="@+id/open_chessclock"
-                android:title="@string/open_chessclock"
+                android:title="@string/mnu_open_chessclock"
                 android:orderInCategory="100"
                 app:showAsAction="always" />
         </menu>

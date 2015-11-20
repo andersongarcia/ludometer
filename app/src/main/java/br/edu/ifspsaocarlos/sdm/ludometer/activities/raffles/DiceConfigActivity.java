@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
 
+/**
+ * Tela de configuração do dado simples.
+ */
 public class DiceConfigActivity extends AppCompatActivity {
 
     @Override

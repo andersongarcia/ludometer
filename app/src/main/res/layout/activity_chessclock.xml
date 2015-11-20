@@ -12,7 +12,7 @@
         android:id="@+id/playerOne"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lblPlayerOne"
+        android:text="@string/lbl_player_one"
         android:textSize="20dp"
         android:rotation="180"
         android:gravity="center_horizontal"
@@ -44,7 +44,7 @@
         android:id="@+id/playerTwo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lblPlayerTwo"
+        android:text="@string/lbl_player_two"
         android:textSize="20dp"
         android:gravity="center_horizontal"
         android:layout_weight="1"/>

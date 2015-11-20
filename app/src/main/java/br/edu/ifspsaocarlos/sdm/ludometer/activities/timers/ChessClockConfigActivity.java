@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
 
+/**
+ * Tela de configuração do relógio de xadrez.
+ */
 public class ChessClockConfigActivity extends AppCompatActivity {
 
     @Override

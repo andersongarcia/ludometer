@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/numero_de_dados"/>
+        android:text="@string/txv_num_dices"/>
     <NumberPicker
         android:id="@+id/pickerNumeroDeDados"
         android:layout_width="match_parent"

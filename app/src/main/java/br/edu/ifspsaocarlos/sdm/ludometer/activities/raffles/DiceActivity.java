@@ -9,6 +9,10 @@ import br.edu.ifspsaocarlos.sdm.ludometer.R;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.SimpleDice;
 
+/**
+ * Tela de sorteio de dado de 6 lados.
+ * Ao tocar a tela um novo número é sorteado.
+ */
 public class DiceActivity extends BaseActivity {
 
     private SimpleDice dice; // dado simples (6 lados)

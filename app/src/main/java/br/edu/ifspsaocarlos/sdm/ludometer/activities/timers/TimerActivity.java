@@ -12,11 +12,18 @@ import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.ITimer;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.TimeFormat;
 
+/**
+ * Tela de contagem regressiva (ampulheta).
+ * Possui botões para iniciar, interromper e reiniciar a
+ * contagem de tempo.
+ * O tempo inicial só pode ser alterado se a contagem estiver
+ * parada e pronta para iniciar.
+ */
 public class TimerActivity extends AppCompatActivity {
 
-    private ITimer timer;
-    private long startTime;
-    private TextView counterView;
+    private ITimer timer;   // contador
+    private long startTime; // tempo a partir do qual deve iniciar a contagem
+    private TextView counterView; // exibição do tempo
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,11 @@ public class TimerActivity extends AppCompatActivity {
         findViewById(R.id.btnReset).setEnabled(false);
     }
 
+    /**
+     * Botão para iniciar a contagem regressiva.
+     *
+     * @param view
+     */
     public void onClickStartTimer (View view) {
         if (timer.getLastTime() > 0) {
             timer.resume();
@@ -46,6 +58,11 @@ public class TimerActivity extends AppCompatActivity {
         findViewById(R.id.minus_time).setEnabled(false);
     }
 
+    /**
+     * Botão para interromper a contagem.
+     *
+     * @param view
+     */
     public void onClickPauseTimer (View view) {
         timer.pause();
         findViewById(R.id.btnPause).setEnabled(false);
@@ -53,6 +70,11 @@ public class TimerActivity extends AppCompatActivity {
         findViewById(R.id.btnStart).setEnabled(true);
     }
 
+    /**
+     * Botão para zerar/reiniciar o contador para o tempo inicial.
+     *
+     * @param view
+     */
     public void onClickResetTimer (View view) {
         timer.stop();
         counterView.setText(showDigitalClock(startTime));
@@ -65,6 +87,13 @@ public class TimerActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.countdown_timer)).setTextColor(Color.BLACK);
     }
 
+    /**
+     * Exibe o tempo restante - passado como parâmetro
+     * em milissegundos - no formato mm:ss.
+     *
+     * @param milliseconds
+     * @return String do tempo restante
+     */
     public String showDigitalClock (long milliseconds) {
         String digitalClock;
         int[] clock = TimeFormat.milliToTime(milliseconds);
@@ -74,6 +103,12 @@ public class TimerActivity extends AppCompatActivity {
         return digitalClock;
     }
 
+    /**
+     * Botões para aumentar ou diminuir o tempo de contagem
+     * em intervalos de 5s.
+     *
+     * @param view
+     */
     public void onClickChangeTime (View view) {
         int button = view.getId();
 

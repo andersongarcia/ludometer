@@ -13,12 +13,17 @@ import br.edu.ifspsaocarlos.sdm.ludometer.adapters.DiceSetAdapter;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.DiceSet;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 
+/**
+ * Tela de sorteio de 1 ou mais dados.
+ * Ao tocar a tela novos números são sorteados.
+ */
+
 public class DiceSetActivity extends BaseActivity {
-    private DiceSet diceSet;
-    private ListView listView;
-    private TextView totalDices;
-    private ListAdapter diceAdapt;
-    private int numberOfDices;
+    private DiceSet diceSet;   // conjunto de dados
+    private ListView listView; // lista que exibe os dados na Activity
+    private TextView totalDices;  // soma dos valores sorteados nos dados
+    private ListAdapter diceAdapt;// adaptador que representa um dado
+    private int numberOfDices; // número de dados a serem jogados/sorteados
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +40,18 @@ public class DiceSetActivity extends BaseActivity {
         update();
     }
 
+    /* Ao tocar a tela sorteia os dados e atualiza a tela */
     public void onClickSort (View view) {
         update();
     }
 
+    /* Abre tela de configuração */
     @Override
     protected Intent getConfig() {
         return new Intent(this, DiceSetConfigActivity.class);
     }
 
-    /* Called when the second activity's finished */
+    /* Chamado com o retorno da tela de configuração */
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
@@ -58,7 +65,7 @@ public class DiceSetActivity extends BaseActivity {
     }
 
     private void update() {
-        // Ao clicar na tela sorteia um novo número do dado.
+        // Ao clicar na tela realiza um novo sorteio de dados.
         int numberDrawn = diceSet.roll();
         totalDices.setText(String.valueOf(numberDrawn));
 

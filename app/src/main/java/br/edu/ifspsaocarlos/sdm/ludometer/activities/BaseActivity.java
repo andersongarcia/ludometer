@@ -11,6 +11,10 @@ import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.TimerActivity;
 
+/**
+ * Classe de referência para criação de novas Activities
+ * contendo o menu padrão.
+ */
 public abstract class BaseActivity extends AppCompatActivity {
     protected static final int REQUEST_CODE = 10;
 

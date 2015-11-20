@@ -10,6 +10,11 @@ import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.TimerActivity;
 
+/**
+ * Tela inicial do aplicativo que apresenta as funções
+ * disponíveis através de ícones.
+ * Ao tocar sobre um ícone abre-se a respectiva função.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,15 +28,15 @@ public class MainActivity extends AppCompatActivity {
         Intent i;
 
         switch (menu) {
-            case R.id.dice:
+            case R.id.dice: // Tela de sorteio de dados
                 i = new Intent(this, DiceSetActivity.class);
                 startActivity(i);
                 break;
-            case R.id.chessclock:
+            case R.id.chessclock: // Tela do relógio de xadrez
                 i = new Intent(this, ChessClockActivity.class);
                 startActivity(i);
                 break;
-            case R.id.countdown:
+            case R.id.countdown: // Tela de contagem regressiva
                 i = new Intent(this, TimerActivity.class);
                 startActivity(i);
                 break;

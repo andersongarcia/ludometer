@@ -1,19 +1,18 @@
 <resources>
     <string name="app_name">Ludometer</string>
-    <string name="lblPlayerOne">Jogador 1</string>
-    <string name="lblPlayerTwo">Jogador 2</string>
-    <string name="lblStart">Iniciar</string>
-    <string name="lblPause">Parar</string>
-    <string name="lblReset">Zerar</string>
-    <string name="open_dice">Dados</string>
-    <string name="open_timer">Cronômetro</string>
-    <string name="open_chessclock">Relógio de Xadrez</string>
-    <string name="times_up">Tempo esgotado!</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="menu_principal">Menu Principal</string>
-    <string name="open_diceset">Conjunto de Dados</string>
-    <string name="total">Total:</string>
-    <string name="menu_settings">Settings</string>
-    <string name="numero_de_dados">Número de Dados</string>
-    <string name="salvar">Salvar</string>
+    <string name="mnu_main_menu">Menu Principal</string>
+    <string name="mnu_settings">Configuração</string>
+    <string name="mnu_save">Salvar</string>
+    <string name="mnu_open_dice">Dados</string>
+    <string name="mnu_open_timer">Cronômetro</string>
+    <string name="mnu_open_chessclock">Relógio de Xadrez</string>
+    <string name="mnu_open_diceset">Conjunto de Dados</string>
+    <string name="lbl_player_one">Jogador 1</string>
+    <string name="lbl_player_two">Jogador 2</string>
+    <string name="btn_start">Iniciar</string>
+    <string name="btn_pause">Parar</string>
+    <string name="btn_reset">Zerar</string>
+    <string name="txv_times_up">Tempo esgotado!</string>
+    <string name="txv_total">Total:</string>
+    <string name="txv_num_dices">Número de Dados</string>
 </resources>
