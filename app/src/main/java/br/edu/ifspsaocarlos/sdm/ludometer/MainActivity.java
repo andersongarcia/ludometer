@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (menu) {
             case R.id.dice:
-                i = new Intent(this, DiceActivity.class);
+                i = new Intent(this, DiceSetActivity.class);
                 startActivity(i);
                 break;
             case R.id.chessclock:

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public abstract class BaseActivity extends AppCompatActivity {
+    static final int REQUEST_CODE = 10;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 startActivity(new Intent(this, TimerActivity.class));
                 break;
             case R.id.menu_config:
-                startActivity(this.getConfig());
+                startActivityForResult(this.getConfig(), REQUEST_CODE);
         }
         return false;
     }

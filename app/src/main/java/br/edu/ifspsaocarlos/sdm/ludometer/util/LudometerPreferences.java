@@ -13,7 +13,7 @@ public class LudometerPreferences {
 
     private final static String PREF_NAME = "LudometerPreferences";
     private final static String TIMER_START_TIME = "TimerStartTime";
-    private final static String NUMBER_OF_DICES = "NumberOfDices";
+    public final static String NUMBER_OF_DICES = "NumberOfDices";
 
     static SharedPreferences getSp (Activity activity) {
         return activity.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);

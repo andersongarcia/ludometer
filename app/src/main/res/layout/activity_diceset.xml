@@ -10,12 +10,18 @@
     <ListView
         android:id="@+id/listDices"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:headerDividersEnabled="false"
+        android:longClickable="false"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15sp">
+        android:layout_marginTop="15sp"
+        android:layout_gravity="center_horizontal">
 
         <TextView
             android:id="@+id/lbl_total_dices"
@@ -25,14 +31,14 @@
             android:text="@string/total"
             android:textSize="20sp"
             android:paddingRight="5dp"
-            />
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/total_dices"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_toRightOf="@id/lbl_total_dices"
-            />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 </LinearLayout>
