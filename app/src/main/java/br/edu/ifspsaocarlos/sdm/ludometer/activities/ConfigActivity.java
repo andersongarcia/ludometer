@@ -1,9 +1,11 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
 
 public abstract class ConfigActivity extends AppCompatActivity {
 

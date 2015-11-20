@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import java.util.List;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
-import br.edu.ifspsaocarlos.sdm.ludometer.model.GeneralDice;
-import br.edu.ifspsaocarlos.sdm.ludometer.model.Raffle;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.GeneralDice;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.Raffle;
 
 public class DiceSetAdapter extends ArrayAdapter<Raffle> {
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.edu.ifspsaocarlos.sdm.ludometer.DiceSetActivity"
+    tools:context="br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity"
     android:onClick="onClickSort"
     android:orientation="vertical">
 

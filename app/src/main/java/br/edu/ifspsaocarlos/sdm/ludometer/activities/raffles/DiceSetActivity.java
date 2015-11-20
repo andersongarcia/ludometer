@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.adapters.DiceSetAdapter;
-import br.edu.ifspsaocarlos.sdm.ludometer.model.DiceSet;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.DiceSet;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 
 public class DiceSetActivity extends BaseActivity {

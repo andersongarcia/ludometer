@@ -1,11 +1,13 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import br.edu.ifspsaocarlos.sdm.ludometer.model.SimpleDice;
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.SimpleDice;
 
 public class DiceActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities.timers;
 
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import br.edu.ifspsaocarlos.sdm.ludometer.model.Countdown;
-import br.edu.ifspsaocarlos.sdm.ludometer.model.ITimer;
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.Countdown;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.ITimer;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.TimeFormat;
 

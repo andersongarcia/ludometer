@@ -1,15 +1,18 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities;
 
 import android.content.Intent;
-import android.content.SyncStatusObserver;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.TimerActivity;
+
 public abstract class BaseActivity extends AppCompatActivity {
-    static final int REQUEST_CODE = 10;
+    protected static final int REQUEST_CODE = 10;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

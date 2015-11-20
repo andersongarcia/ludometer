@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer.model;
+package br.edu.ifspsaocarlos.sdm.ludometer.model.timers;
 
 import android.graphics.Color;
 import android.os.CountDownTimer;

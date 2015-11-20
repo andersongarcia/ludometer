@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer.model;
+package br.edu.ifspsaocarlos.sdm.ludometer.model.raffles;
 
 public class GeneralDice extends Raffle {
     /**

@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer.model;
+package br.edu.ifspsaocarlos.sdm.ludometer.model.raffles;
 
 import java.util.ArrayList;
 import java.util.List;

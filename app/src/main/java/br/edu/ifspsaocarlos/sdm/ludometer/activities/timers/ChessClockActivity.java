@@ -1,13 +1,13 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities.timers;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.SystemClock;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Chronometer;
 
-import br.edu.ifspsaocarlos.sdm.ludometer.model.Stopwatch;
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.Stopwatch;
 
 public class ChessClockActivity extends BaseActivity {
 

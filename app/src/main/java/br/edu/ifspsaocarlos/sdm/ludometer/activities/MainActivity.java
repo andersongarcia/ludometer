@@ -1,9 +1,14 @@
-package br.edu.ifspsaocarlos.sdm.ludometer;
+package br.edu.ifspsaocarlos.sdm.ludometer.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import br.edu.ifspsaocarlos.sdm.ludometer.R;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.TimerActivity;
 
 public class MainActivity extends AppCompatActivity {
 

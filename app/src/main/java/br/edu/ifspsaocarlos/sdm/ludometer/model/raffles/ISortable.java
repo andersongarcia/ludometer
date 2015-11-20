@@ -1,4 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer.model;
+package br.edu.ifspsaocarlos.sdm.ludometer.model.raffles;
 
 /**
  * Interface para sorteio

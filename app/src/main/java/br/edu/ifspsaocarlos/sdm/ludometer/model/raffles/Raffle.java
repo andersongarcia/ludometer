@@ -1,6 +1,4 @@
-package br.edu.ifspsaocarlos.sdm.ludometer.model;
-
-import android.os.SystemClock;
+package br.edu.ifspsaocarlos.sdm.ludometer.model.raffles;
 
 import java.util.Random;
 
