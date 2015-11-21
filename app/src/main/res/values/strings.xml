@@ -12,6 +12,7 @@
     <string name="btn_start">Iniciar</string>
     <string name="btn_pause">Parar</string>
     <string name="btn_reset">Zerar</string>
+    <string name="btn_restart">Reiniciar</string>
     <string name="txv_times_up">Tempo esgotado!</string>
     <string name="txv_total">Total:</string>
     <string name="txv_num_dices">Número de Dados</string>
