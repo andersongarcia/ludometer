@@ -1,19 +1,16 @@
 package br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
-import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.adapters.CircularAdapter;
 
-public class RouletteActivity extends BaseActivity {
+public class RouletteActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +39,5 @@ public class RouletteActivity extends BaseActivity {
 
             }
         });
-    }
-
-    @Override
-    protected Intent getConfig() {
-        return null;
     }
 }

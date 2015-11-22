@@ -1,20 +1,19 @@
 package br.edu.ifspsaocarlos.sdm.ludometer.activities.timers;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Chronometer;
 import android.widget.TextView;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
-import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.Stopwatch;
 
 /**
  * Tela de relógio de xadrez.
  * Ao tocar a tela alterna a contagem de tempo dos jogadores.
  */
-public class ChessClockActivity extends BaseActivity {
+public class ChessClockActivity extends AppCompatActivity {
 
 
     private Stopwatch chronP1; // relógio do jogador 1
@@ -39,7 +38,7 @@ public class ChessClockActivity extends BaseActivity {
      * iniciar a contagem de tempo, enquanto o relógio do oponente
      * é parado.
      *
-     * @param view
+     * @param view tela
      */
     public void onClickChron(View view) {
         if (turn) {
@@ -66,7 +65,7 @@ public class ChessClockActivity extends BaseActivity {
     /**
      * Botão para reiniciar as contagens de tempo.
      *
-     * @param view
+     * @param view botao
      */
     public void onClickResetClock (View view) {
         chronP1.stop();
@@ -82,10 +81,5 @@ public class ChessClockActivity extends BaseActivity {
         chronP1 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP1));
         chronP2 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP2));
         turn = true; // começa com P1
-    }
-
-    @Override
-    protected Intent getConfig() {
-        return null;
     }
 }

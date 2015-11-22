@@ -16,4 +16,5 @@
     <string name="txv_times_up">Tempo esgotado!</string>
     <string name="txv_total">Total:</string>
     <string name="txv_num_dices">Número de Dados</string>
+    <string name="title_activity_dice_set_settings">Configurações</string>
 </resources>

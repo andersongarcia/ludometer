@@ -2,13 +2,15 @@ package br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
-import br.edu.ifspsaocarlos.sdm.ludometer.activities.BaseActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.adapters.DiceSetAdapter;
 import br.edu.ifspsaocarlos.sdm.ludometer.model.raffles.DiceSet;
 import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
@@ -17,8 +19,8 @@ import br.edu.ifspsaocarlos.sdm.ludometer.util.LudometerPreferences;
  * Tela de sorteio de 1 ou mais dados.
  * Ao tocar a tela novos números são sorteados.
  */
-
-public class DiceSetActivity extends BaseActivity {
+public class DiceSetActivity extends AppCompatActivity {
+    private static final int INTENT_CONFIG = 10;
     private DiceSet diceSet;   // conjunto de dados
     private ListView listView; // lista que exibe os dados na Activity
     private TextView totalDices;  // soma dos valores sorteados nos dados
@@ -40,20 +42,35 @@ public class DiceSetActivity extends BaseActivity {
         update();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_diceset, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.menu_config:
+                startActivityForResult(new Intent(this, DiceSetConfigActivity.class), INTENT_CONFIG);
+                break;
+        }
+        return false;
+    }
+
     /* Ao tocar a tela sorteia os dados e atualiza a tela */
     public void onClickSort (View view) {
         update();
     }
 
     /* Abre tela de configuração */
-    @Override
     protected Intent getConfig() {
         return new Intent(this, DiceSetConfigActivity.class);
     }
 
     /* Chamado com o retorno da tela de configuração */
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE) {
+        if (requestCode == INTENT_CONFIG) {
             if (resultCode == RESULT_OK) {
                 //numberOfDices = data.getIntExtra(LudometerPreferences.NUMBER_OF_DICES, 1);
                 numberOfDices = data.getIntExtra(LudometerPreferences.NUMBER_OF_DICES, 1);

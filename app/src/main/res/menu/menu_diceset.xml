@@ -8,32 +8,5 @@
         android:icon="@drawable/gear_config_wht"
         app:showAsAction="ifRoom"
         android:title="@string/mnu_settings" />
-    <item
-        android:id="@+id/menu_principal"
-        android:icon="@drawable/ic_menu_list"
-        android:title="@string/mnu_main_menu"
-        app:showAsAction="ifRoom">
-        <menu>
-            <item
-                android:id="@+id/open_dice"
-                android:title="@string/mnu_open_dice"
-                android:orderInCategory="100"
-                app:showAsAction="always" />
-            <item
-                android:id="@+id/open_diceset"
-                android:title="@string/mnu_open_diceset"
-                android:orderInCategory="100"
-                app:showAsAction="always" />
-            <item
-                android:id="@+id/open_timer"
-                android:title="@string/mnu_open_timer"
-                android:orderInCategory="100"
-                app:showAsAction="always" />
-            <item
-                android:id="@+id/open_chessclock"
-                android:title="@string/mnu_open_chessclock"
-                android:orderInCategory="100"
-                app:showAsAction="always" />
-        </menu>
-    </item>
+
 </menu>
