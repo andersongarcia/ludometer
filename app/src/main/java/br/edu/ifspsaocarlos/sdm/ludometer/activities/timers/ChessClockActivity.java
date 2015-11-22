@@ -70,7 +70,7 @@ public class ChessClockActivity extends AppCompatActivity {
     }
 
     /**
-     * Botão para reiniciar as contagens de tempo.
+     * Botão para parar as contagens de tempo.
      *
      * @param view botao
      */
@@ -86,7 +86,6 @@ public class ChessClockActivity extends AppCompatActivity {
      *
      * @param view botao
      */
-
     public void onClickResetClock (View view) {
         chronP1.reset();
         chronP2.reset();
