@@ -38,7 +38,7 @@ public class DiceSetActivity extends AppCompatActivity {
         // Obtém número de dados das preferências
         numberOfDices = LudometerPreferences.getNumberOfDices(this);
 
-        diceSet = new DiceSet(numberOfDices, 6);
+        diceSet = new DiceSet(numberOfDices, 1);
         update();
     }
 
