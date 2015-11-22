@@ -7,6 +7,7 @@ import android.view.View;
 
 import br.edu.ifspsaocarlos.sdm.ludometer.R;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.DiceSetActivity;
+import br.edu.ifspsaocarlos.sdm.ludometer.activities.raffles.RouletteActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity;
 import br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.TimerActivity;
 
@@ -30,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         switch (menu) {
             case R.id.dice: // Tela de sorteio de dados
                 i = new Intent(this, DiceSetActivity.class);
+                startActivity(i);
+                break;
+            case R.id.roulette: // Tela de sorteio de dados
+                i = new Intent(this, RouletteActivity.class);
                 startActivity(i);
                 break;
             case R.id.chessclock: // Tela do relógio de xadrez

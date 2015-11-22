@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:layout_width="fill_parent"
     android:orientation="vertical"
-    android:weightSum="3"
+    android:weightSum="4"
     tools:context="br.edu.ifspsaocarlos.sdm.ludometer.activities.MainActivity" >
 
     <ImageView
@@ -16,6 +16,16 @@
         android:layout_weight="1"
         android:padding="10sp"
         android:src="@drawable/dice"
+        android:onClick="onClickMenu"/>
+
+    <ImageView
+        android:id="@+id/roulette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:padding="10sp"
+        android:src="@drawable/roulete"
         android:onClick="onClickMenu"/>
 
     <ImageView
