@@ -15,12 +15,13 @@ import br.edu.ifspsaocarlos.sdm.ludometer.model.timers.Stopwatch;
  */
 public class ChessClockActivity extends AppCompatActivity {
 
-
     private Stopwatch chronP1; // relógio do jogador 1
     private Stopwatch chronP2; // relógio do jogador 2
     private boolean turn; // vez de P1 = true; vez de P2 = false.
     private TextView tvP1Chron;
     private TextView tvP2Chron;
+    private TextView tvStop;
+    private TextView tvReset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,9 @@ public class ChessClockActivity extends AppCompatActivity {
 
         tvP1Chron = (TextView) findViewById(R.id.chronometerP1);
         tvP2Chron = (TextView) findViewById(R.id.chronometerP2);
+
+        tvStop = (TextView)findViewById(R.id.btnStopChessClock);
+        tvReset = (TextView)findViewById(R.id.btnResetChessClock);
 
         startNewGame();
     }
@@ -60,6 +64,9 @@ public class ChessClockActivity extends AppCompatActivity {
             tvP1Chron.setEnabled(false);
             turn = true;
         }
+
+        tvStop.setEnabled(true);
+        tvReset.setEnabled(false);
     }
 
     /**
@@ -67,9 +74,22 @@ public class ChessClockActivity extends AppCompatActivity {
      *
      * @param view botao
      */
-    public void onClickResetClock (View view) {
+    public void onClickStopClock (View view) {
         chronP1.stop();
         chronP2.stop();
+        tvStop.setEnabled(false);
+        tvReset.setEnabled(true);
+    }
+
+    /**
+     * Botão para reiniciar as contagens de tempo.
+     *
+     * @param view botao
+     */
+
+    public void onClickResetClock (View view) {
+        chronP1.reset();
+        chronP2.reset();
         startNewGame();
     }
 
@@ -81,5 +101,7 @@ public class ChessClockActivity extends AppCompatActivity {
         chronP1 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP1));
         chronP2 = new Stopwatch ((Chronometer) findViewById(R.id.chronometerP2));
         turn = true; // começa com P1
+        tvStop.setEnabled(false);
+        tvReset.setEnabled(false);
     }
 }

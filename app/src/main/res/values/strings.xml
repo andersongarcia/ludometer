@@ -17,4 +17,6 @@
     <string name="txv_total">Total:</string>
     <string name="txv_num_dices">Número de Dados</string>
     <string name="title_activity_dice_set_settings">Configurações</string>
+    <string name="btn_finish">Terminar</string>
+    <string name="btn_stop">Parar</string>
 </resources>

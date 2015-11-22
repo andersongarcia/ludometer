@@ -68,6 +68,11 @@ public class Countdown implements ITimer {
     }
 
     @Override
+    public void reset() {
+        this.stop();
+    }
+
+    @Override
     public long getLastTime() {
         return this.lastTime;
     }

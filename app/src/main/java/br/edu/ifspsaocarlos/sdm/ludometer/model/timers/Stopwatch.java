@@ -51,8 +51,19 @@ public class Stopwatch implements ITimer {
     }
 
     @Override
+    public void reset() {
+        isStarted = false;
+        this.time = 0;
+        this.chronometer.setBase(SystemClock.elapsedRealtime() - this.time);
+    }
+
+    @Override
     public long getLastTime() {
         return this.time;
+    }
+
+    public boolean isStarted(){
+        return isStarted;
     }
 
 }

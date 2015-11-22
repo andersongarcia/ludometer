@@ -12,6 +12,8 @@ public interface ITimer {
     void pause();
     /** reinicia a contagem */
     void resume();
+    /** zera a contagem */
+    void reset();
     /** retorna tempo restante */
     long getLastTime();
 }
