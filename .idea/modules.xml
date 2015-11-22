@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Ludometer.iml" filepath="$PROJECT_DIR$/Ludometer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file:///data/home/lcp/StudioProjects/ludometer/ludometer.iml" filepath="/data/home/lcp/StudioProjects/ludometer/ludometer.iml" />
     </modules>
   </component>
 </project>

@@ -6,7 +6,8 @@
     android:orientation="vertical"
     tools:context="br.edu.ifspsaocarlos.sdm.ludometer.activities.timers.ChessClockActivity"
     android:weightSum="5"
-    android:onClick="onClickChron" >
+    android:onClick="onClickChron"
+    android:keepScreenOn="true">
 
     <TextView
         android:id="@+id/playerOne"
@@ -26,11 +27,13 @@
         android:gravity="center_horizontal"
         android:layout_weight="1" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text=" "
-        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="20sp"
+        android:layout_weight="1"
+        android:text="@string/btn_restart"
+        android:onClick="onClickResetClock" />
     
     <Chronometer
         android:id="@+id/chronometerP2"
